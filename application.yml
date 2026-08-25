@@ -1,0 +1,17 @@
+# ===================================================================
+# RIKKEIPAY ASSISTANT - APPLICATION CONFIGURATION
+# ===================================================================
+spring:
+  application:
+    name: rikkeipay-assistant-service
+
+# Langfuse Observability & LLMOps Configuration
+langfuse:
+  enabled: ${LANGFUSE_ENABLED:true}
+  base-url: ${LANGFUSE_BASE_URL:https://cloud.langfuse.com}
+  public-key: ${LANGFUSE_PUBLIC_KEY:pk-lf-default-key}
+  secret-key: ${LANGFUSE_SECRET_KEY:sk-lf-default-key}
+  release: ${APP_VERSION:v1.0.0-rikkeipay}
+  environment: ${SPRING_PROFILES_ACTIVE:production}
+  flush-interval-seconds: 5
+  max-batch-size: 100
